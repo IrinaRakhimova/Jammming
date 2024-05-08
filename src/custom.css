@@ -1,0 +1,29 @@
+:root {
+    --bs-body-bg: #191414;
+}
+
+.my-button {
+    background-color: #1DB954;
+    border-color: #1DB954;
+}
+
+.my-button:hover {
+    background-color: #158b3e;
+    border-color: #158b3e;
+}
+
+.add-button {
+    background-color: #191414;
+    color: white;
+}
+
+.add-button:hover {
+    background-color: #4d4c4c;
+    color: white;
+}
+
+.green {
+    background-color: #1DB954;
+}
+
+
