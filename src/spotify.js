@@ -21,6 +21,36 @@ const spotify = {
         }      
     },
 
+    getUserId() {
+        if (!accessToken) {
+            return Promise.reject(new Error('Access token is missing'));
+        }
+        const nameEndpoint = 'https://api.spotify.com/v1/me';
+        return fetch(nameEndpoint, {
+                method: 'GET',
+                headers: {
+                    'Authorization': `Bearer ${accessToken}`,
+                }
+            })
+            .then((response) => {
+                if (!response.ok) {
+                    throw new Error('Failed to fetch user data');
+                }
+                return response.json();
+            })
+            .then((data) => {
+                if (!data.id) {
+                    throw new Error('User ID not found in response');
+                }
+                userId = data.id;
+                return userId;
+            })
+            .catch((error) => {
+                console.error('Error fetching user ID:', error);
+                throw error; // Rethrow the error for higher-level handling
+            });
+    },
+
     savePlaylistToSpotify (name, trackUris) {
         return fetch(`https://api.spotify.com/v1/users/${userId}/playlists`, {
             method: 'POST',

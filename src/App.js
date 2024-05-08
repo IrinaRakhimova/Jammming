@@ -17,6 +17,7 @@ function App() {
   useEffect(() => {
     const authenticated = spotify.checkAuth();
     if (authenticated) {
+      spotify.getUserId();
       setLogged(authenticated);
     } else {
       console.log("Login failed.");
