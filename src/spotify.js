@@ -1,7 +1,7 @@
 let accessToken;
 let userId;
 const clientId = "cc27cc8fdd314c4c8758dbc6d06c60c8";
-const redirectUrl = "http://localhost:3000/callback";
+const redirectUrl = "http://jammming-irina/callback";
 
 
 const spotify = {
