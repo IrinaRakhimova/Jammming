@@ -47,7 +47,7 @@ const spotify = {
             })
             .catch((error) => {
                 console.error('Error fetching user ID:', error);
-                throw error; // Rethrow the error for higher-level handling
+                throw error; 
             });
     },
 

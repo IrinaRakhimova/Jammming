@@ -34,14 +34,14 @@ function App() {
     if (!isAdded) {
       const updatedPlaylist = [...playlistTracks, track];
       setPlaylistTracks(updatedPlaylist);
-      updateSearchResults(track.id, true); // Mark track as inactive in search results
+      updateSearchResults(track.id, true); 
     }
   };
 
   const removeTrack = (track) => {
     const updatedPlaylist = playlistTracks.filter((addedTracks) => addedTracks.id !== track.id);
     setPlaylistTracks(updatedPlaylist);
-    updateSearchResults(track.id, false); // Mark track as active in search results
+    updateSearchResults(track.id, false); 
 };
 
   const updateSearchResults = (trackId, inactive) => {
