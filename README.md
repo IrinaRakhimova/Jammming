@@ -41,6 +41,10 @@ This project is licensed under the [Creative Commons Zero v1.0 Universal](https:
 
 By contributing to this project, you agree that your contributions will be licensed under the Creative Commons Zero v1.0 Universal License.
 
+## Published App
+
+The Jammming web application is live and can be accessed [here](https://jammmingtop.netlify.app/).
+
 ### Codecademy Course
 
 This project was completed as part of the Codecademy Front-End Engineer career path.
